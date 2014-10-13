@@ -21,9 +21,13 @@ var mapProp = {
   };
 var map= new google.maps.Map(document.getElementById("googleMap"),mapProp);
   
+//Icon Image
 var marker = new google.maps.Marker({position:myCenter,icon:'Caduceus-Red.png'});
 
 marker.setMap(map);
+
+//Info Window
+var infowindow = new google.maps.InfoWindow({ content:"We can put info of the event here as well!"});
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
