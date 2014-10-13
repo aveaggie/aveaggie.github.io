@@ -21,14 +21,14 @@ var mapProp = {
   };
 var map= new google.maps.Map(document.getElementById("googleMap"),mapProp);
   
-//Marker/Icon Image
+//Icon Image
 var marker = new google.maps.Marker({position:myCenter,icon:'Caduceus-Red.png'});
 
 marker.setMap(map);
 
-//Info Window
+//Marker-Icon Image
 var infowindow = new google.maps.InfoWindow({content:"We can put info of the event here as well!"});
-//infowindow.open(map,marker);
+infowindow.open(map,marker);
 
 //Info Window that opens when clicking on marker
 
@@ -37,9 +37,7 @@ var infowindowClick = new google.map.InfoWindow({content:"Or we can do it by cli
 //Open on click
 
 //google.maps.event.addListener(marker, 'click', function() {infowindowClick.open(map,marker);});
-google.maps.event.addListener(marker, 'click', function() {
-	infowindow.open(map,marker);
-	});
+google.maps.event.addListener(marker, 'click', function() {infowindow.open(map,marker);});
 
 
 
