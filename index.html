@@ -37,11 +37,8 @@ var infowindowClick = new google.maps.InfoWindow({content:"Or we can do it by cl
 
 //Open on click
 
-//google.maps.event.addListener(marker, 'click', function() {infowindowClick.open(map,marker);});
-  google.maps.event.addListener(marker, 'click', function() { 
-	map.setZoom(2); 
-	map.setCenter(marker.getPosition());
-	});
+google.maps.event.addListener(marker, 'click', function() {infowindowClick.open(map,marker);});
+  
 
 
 
