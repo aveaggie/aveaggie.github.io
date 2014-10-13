@@ -28,7 +28,7 @@ marker.setMap(map);
 
 //Info Window
 var infowindow = new google.maps.InfoWindow({content:"We can put info of the event here as well!"});
-infowindow.open(map,marker);
+//infowindow.open(map,marker);
 
 //Info Window that opens when clicking on marker
 
@@ -36,13 +36,14 @@ var infowindowClick = new google.map.InfoWindow({content:"Or we can do it by cli
 
 //Open on click
 
-google.maps.event.addListener(marker, 'click', function() {infowindowClick.open(map,marker);});
+//google.maps.event.addListener(marker, 'click', function() {infowindowClick.open(map,marker);});
+google.maps.event.addListener(marker, 'click', function() {infowindow.open(map,marker);});
 
 
 
 }
 
-google.maps.event.addListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 </head>
 
