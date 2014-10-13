@@ -29,7 +29,17 @@ marker.setMap(map);
 //Info Window
 var infowindow = new google.maps.InfoWindow({content:"We can put info of the event here as well!"});
 
+
+//Info Window that opens when clicking on marker
+
+var infowindowClick = new google.map.InfoWindow({content:"Or we can do it by cliking on marker"});
+
+//Open on click
+
+google.maps.event.addListener(marker, 'click', function() {infoWindow.open(map,marker);} );
+
 infowindow.open(map,marker);
+
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
