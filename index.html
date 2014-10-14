@@ -34,12 +34,28 @@ infowindow.open(map,marker);
 //Info Window that opens when clicking on marker
 
 //var infowindowClick = new google.maps.InfoWindow({content:"Or we can do it by cliking on marker"});
-var infowindowClick = new google.maps.InfoWindow({content:"Or we can do it by cliking on marker", background-color = #B2D1FF, max-width = 80, max-height = 120});
+var infowindowClick = new google.maps.InfoWindow({content:"Or we can do it by cliking on marker",); // background-color = #B2D1FF, max-width = 80, max-height = 120}
 
 //Open on click
 
 google.maps.event.addListener(marker, 'click', function() {infowindowClick.open(map,marker);});
   
+ //InfoBox
+ 
+ var infobox = new InfoBox({
+     content: document.getElemtnById("infobox"), 
+	 disableAutoPan: true,
+	 maxWidth: 80;
+	 pixelOffset: new google.maps.Size(0,0),
+	 zIndex: null,
+	 boxStyle: { background-color = #B2D1FF,
+	 opacity: 0,
+	 width: "120px"
+	 }});
+
+google.maps.event.addListener(marker, 'click', function() { infobox.open(map, marker);});
+    
+	 
 
 
 
