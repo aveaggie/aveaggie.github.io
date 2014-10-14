@@ -44,9 +44,9 @@ google.maps.event.addListener(marker, 'click', function() {infowindowClick.open(
 
 //Search Box
 
-var input = (document.getElementById('pac-input'));
+var input = /** @type {HTMLInputElement} */(document.getElementById('pac-input'));
 
-var searchBox = new google.maps.places.SearchBox((input));
+var searchBox = new google.maps.places.SearchBox(/** @type {HTMLInputElement} */(input));
 
  google.maps.event.addListener(searchBox, 'places_changed', function() {
     var places = searchBox.getPlaces();
