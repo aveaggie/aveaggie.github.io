@@ -14,7 +14,10 @@
 <script>
 var myCenter = new google.maps.LatLng(51.508742, -0.120850);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of f28ed9e... t
 function initialize()
 {
 var mapProp = {
@@ -28,12 +31,6 @@ var mapProp = {
   //mapTypeId:google.maps.MapTypeId.TERRAIN
   };
 var map= new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-
-/*var input = document.getElementById('searchTextField');
-var autocomplete = new google.maps.places.Autocomplete(input);*/
-}
-
   
 //Icon Image
 var marker = new google.maps.Marker({position:myCenter,icon:'Caduceus-Red.png'});
@@ -106,7 +103,7 @@ var searchBox = new google.maps.places.SearchBox((input));
   // current map's viewport.
   google.maps.event.addListener(map, 'bounds_changed', function() {
     var bounds = map.getBounds();
-   // searchBox.setBounds(bounds);
+    searchBox.setBounds(bounds);
   });
 }
 
